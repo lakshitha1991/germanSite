@@ -1,0 +1,30 @@
+route:
+    path:     /
+    defaults: { _controller: "ShipCruiseBundle:Route:index" }
+
+route_show:
+    path:     /{id}/show
+    defaults: { _controller: "ShipCruiseBundle:Route:show" }
+
+route_new:
+    path:     /new
+    defaults: { _controller: "ShipCruiseBundle:Route:new" }
+
+route_create:
+    path:     /create
+    defaults: { _controller: "ShipCruiseBundle:Route:create" }
+    methods:  POST
+
+route_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "ShipCruiseBundle:Route:edit" }
+
+route_update:
+    path:     /{id}/update
+    defaults: { _controller: "ShipCruiseBundle:Route:update" }
+    methods:  [POST, PUT]
+
+route_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "ShipCruiseBundle:Route:delete" }
+    methods:  [POST, DELETE]

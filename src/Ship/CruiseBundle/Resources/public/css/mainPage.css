@@ -1,0 +1,69 @@
+/* 
+    Created on : Feb 27, 2016, 7:30:58 PM
+    Author     : lakshitha
+*/
+.no-margin { 
+    margin:0; 
+}
+.paddingTop{
+    padding-top: 2%;            
+}
+.CEO{
+    width: 100%;
+    padding-bottom: 80px;
+}
+.heading {
+    text-align: center;
+}
+.dropdowns {
+    margin:0 25% 0 25%;
+}
+.CEOHeading{
+    text-align: center;
+    background-color: #4bda48;
+    height: 100px;
+    width: 100%;
+    padding-top: 25px;
+    margin: 0;
+}
+.CEOText{
+    width: 100%;
+    height: auto;
+    border: #000;
+    border-radius: 5px;
+    border-style: solid;
+    border-width: medium;
+    margin-top: 2%;
+}
+.logo{
+    padding-top: 10%;
+}
+.navigation{
+    width: 100%;
+    height: 100%;
+}
+.navigationBar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    padding: 2% 6% 0 0;
+}
+.navigationBar ul :hover{
+    background: rgba(238,255,255, 0.2); 
+    text-decoration: none;
+}
+.navigationBar ul h4{
+    color: white;
+}
+.navigationBar li{
+    display: inline;
+    float: right;
+    padding-left: 2%;
+    padding-right: 2%;
+}
+.navigationBar ul li :hover{
+    background:none;
+}
+.active{
+    background: rgba(238,255,255, 0.2); 
+}

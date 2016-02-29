@@ -1,0 +1,11 @@
+Ship\CruiseBundle\Entity\SunIndex:
+    type: entity
+    table: sun_index
+    id:
+        id:
+            type: integer
+            generator: {strategy: AUTO }
+    fields:
+        sunindex:
+            type: string
+            length: 255

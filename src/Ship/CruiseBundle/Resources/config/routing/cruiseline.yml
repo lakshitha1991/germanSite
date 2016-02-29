@@ -1,0 +1,30 @@
+cruiseline:
+    path:     /
+    defaults: { _controller: "ShipCruiseBundle:CruiseLine:index" }
+
+cruiseline_show:
+    path:     /{id}/show
+    defaults: { _controller: "ShipCruiseBundle:CruiseLine:show" }
+
+cruiseline_new:
+    path:     /new
+    defaults: { _controller: "ShipCruiseBundle:CruiseLine:new" }
+
+cruiseline_create:
+    path:     /create
+    defaults: { _controller: "ShipCruiseBundle:CruiseLine:create" }
+    methods:  POST
+
+cruiseline_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "ShipCruiseBundle:CruiseLine:edit" }
+
+cruiseline_update:
+    path:     /{id}/update
+    defaults: { _controller: "ShipCruiseBundle:CruiseLine:update" }
+    methods:  [POST, PUT]
+
+cruiseline_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "ShipCruiseBundle:CruiseLine:delete" }
+    methods:  [POST, DELETE]

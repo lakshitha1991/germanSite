@@ -1,0 +1,30 @@
+cabinrecommendation:
+    path:     /
+    defaults: { _controller: "ShipCruiseBundle:CabinRecommendation:index" }
+
+cabinrecommendation_show:
+    path:     /{id}/show
+    defaults: { _controller: "ShipCruiseBundle:CabinRecommendation:show" }
+
+cabinrecommendation_new:
+    path:     /new
+    defaults: { _controller: "ShipCruiseBundle:CabinRecommendation:new" }
+
+cabinrecommendation_create:
+    path:     /create
+    defaults: { _controller: "ShipCruiseBundle:CabinRecommendation:create" }
+    methods:  POST
+
+cabinrecommendation_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "ShipCruiseBundle:CabinRecommendation:edit" }
+
+cabinrecommendation_update:
+    path:     /{id}/update
+    defaults: { _controller: "ShipCruiseBundle:CabinRecommendation:update" }
+    methods:  [POST, PUT]
+
+cabinrecommendation_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "ShipCruiseBundle:CabinRecommendation:delete" }
+    methods:  [POST, DELETE]

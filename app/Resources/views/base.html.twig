@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <!-- Bootstrap -->
+        <link href="{{ asset('css/bootstrap.css') }}" rel="stylesheet" media="screen">
+
+        <!-- HTML5 Shim and Respond.js add IE8 support of HTML5 elements and media queries -->
+        {% include 'BraincraftedBootstrapBundle::ie8-support.html.twig' %}
+
+        <title>{% block title %}Welcome!{% endblock %}</title>
+    {% block stylesheets %}{% endblock %}
+    <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+
+    
+
+</head>
+<body>
+    {#<div class="row">
+    <nav class="navbar navbar-fixed-top navbar-default"  >
+        <div class="navbar-inners">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#news">News</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <ul style="float:right;list-style-type:none;">
+                    <li><a class="active" href="#about">About</a></li>
+                    <li><a href="#login">Login</a></li>
+                </ul>
+            </ul>
+        </div>
+    </nav>
+    </div>#}
+
+
+    <!-- jQuery (necessary for Bootstraps JavaScript plugins) -->
+    <script src="{{ asset('js/jquery.js') }}"></script>
+    <!-- Include all JavaScripts, compiled by Assetic -->
+    <script src="{{ asset('js/bootstrap.js') }}"></script>
+
+{% block body %}{% endblock %}
+{% block javascripts %}{% endblock %}
+</body>
+</html>

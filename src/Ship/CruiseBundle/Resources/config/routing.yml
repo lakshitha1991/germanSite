@@ -1,0 +1,28 @@
+ship_cruise_sunindex:
+    resource: "@ShipCruiseBundle/Resources/config/routing/sunindex.yml"
+    prefix:   /sunindex
+
+ship_cruise_ship:
+    resource: "@ShipCruiseBundle/Resources/config/routing/ship.yml"
+    prefix:   /ship
+
+ship_cruise_route:
+    resource: "@ShipCruiseBundle/Resources/config/routing/route.yml"
+    prefix:   /route
+
+ship_cruise_cruiseline:
+    resource: "@ShipCruiseBundle/Resources/config/routing/cruiseline.yml"
+    prefix:   /cruiseline
+
+ship_cruise_cabinrecommendation:
+    resource: "@ShipCruiseBundle/Resources/config/routing/cabinrecommendation.yml"
+    prefix:   /cabinrecommendation
+
+
+ship_cruise_homepage:
+    path:     /
+    defaults: { _controller: ShipCruiseBundle:Default:home }
+
+ship_cruise_result:
+    path:     /result
+    defaults: { _controller: ShipCruiseBundle:Default:result }

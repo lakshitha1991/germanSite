@@ -1,0 +1,11 @@
+Ship\CruiseBundle\Entity\Ship:
+    type: entity
+    table: ship
+    id:
+        id:
+            type: integer
+            generator: {strategy: AUTO }
+    fields:
+        ship:
+            type: string
+            length: 255

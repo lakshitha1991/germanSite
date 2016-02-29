@@ -1,0 +1,11 @@
+Ship\CruiseBundle\Entity\CabinRecommendation:
+    type: entity
+    table: cabin_recommendation
+    id:
+        id:
+            type: integer
+            generator: {strategy: AUTO }
+    fields:
+        cabinRecommendation:
+            type: string
+            length: 255
