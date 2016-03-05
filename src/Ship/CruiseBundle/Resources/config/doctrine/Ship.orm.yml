@@ -13,9 +13,6 @@ Ship\CruiseBundle\Entity\Ship:
         route:
             targetEntity: Route
             mappedBy: cruiseLine
-        sunIndex:
-            targetEntity: SunIndex
-            mappedBy: cruiseLine
         cabin:
             targetEntity: CabinRecommendation
             mappedBy: cruiseLine
@@ -23,7 +20,6 @@ Ship\CruiseBundle\Entity\Ship:
         cruiseLine:
             targetEntity: CruiseLine
             inversedBy: ship
-#            nullable: true
             joinColumn:
                 name: cruise_line_id
                 referencedColumnName: id

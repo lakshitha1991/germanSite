@@ -30,6 +30,7 @@ class CabinRecommendationType extends AbstractType {
                     'property' => 'route'
                 ))
                 ->add('cabinRecommendation')
+                ->add('sunIndex')
         ;
     }
 

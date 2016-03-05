@@ -1,7 +1,3 @@
-ship_cruise_sunindex:
-    resource: "@ShipCruiseBundle/Resources/config/routing/sunindex.yml"
-    prefix:   /sunindex
-
 ship_cruise_ship:
     resource: "@ShipCruiseBundle/Resources/config/routing/ship.yml"
     prefix:   /ship

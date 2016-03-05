@@ -32,11 +32,6 @@ class CruiseLine
     /**
      * @var \Doctrine\Common\Collections\Collection
      */
-    private $sunIndex;
-
-    /**
-     * @var \Doctrine\Common\Collections\Collection
-     */
     private $cabin;
 
     /**
@@ -46,7 +41,6 @@ class CruiseLine
     {
         $this->ship = new \Doctrine\Common\Collections\ArrayCollection();
         $this->route = new \Doctrine\Common\Collections\ArrayCollection();
-        $this->sunIndex = new \Doctrine\Common\Collections\ArrayCollection();
         $this->cabin = new \Doctrine\Common\Collections\ArrayCollection();
     }
 
@@ -147,39 +141,6 @@ class CruiseLine
     public function getRoute()
     {
         return $this->route;
-    }
-
-    /**
-     * Add sunIndex
-     *
-     * @param \Ship\CruiseBundle\Entity\SunIndex $sunIndex
-     * @return CruiseLine
-     */
-    public function addSunIndex(\Ship\CruiseBundle\Entity\SunIndex $sunIndex)
-    {
-        $this->sunIndex[] = $sunIndex;
-
-        return $this;
-    }
-
-    /**
-     * Remove sunIndex
-     *
-     * @param \Ship\CruiseBundle\Entity\SunIndex $sunIndex
-     */
-    public function removeSunIndex(\Ship\CruiseBundle\Entity\SunIndex $sunIndex)
-    {
-        $this->sunIndex->removeElement($sunIndex);
-    }
-
-    /**
-     * Get sunIndex
-     *
-     * @return \Doctrine\Common\Collections\Collection 
-     */
-    public function getSunIndex()
-    {
-        return $this->sunIndex;
     }
 
     /**

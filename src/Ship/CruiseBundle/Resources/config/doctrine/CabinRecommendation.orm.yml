@@ -9,7 +9,7 @@ Ship\CruiseBundle\Entity\CabinRecommendation:
         cabinRecommendation:
             type: string
             length: 255
-        sunindex:
+        sunIndex:
             type: string
             length: 255
     manyToOne:

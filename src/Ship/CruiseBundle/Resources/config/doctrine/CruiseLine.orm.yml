@@ -16,9 +16,6 @@ Ship\CruiseBundle\Entity\CruiseLine:
         route:
             targetEntity: Route
             mappedBy: cruiseLine
-        sunIndex:
-            targetEntity: SunIndex
-            mappedBy: cruiseLine
         cabin:
             targetEntity: CabinRecommendation
             mappedBy: cruiseLine

@@ -10,9 +10,6 @@ Ship\CruiseBundle\Entity\Route:
             type: string
             length: 255
     oneToMany:
-        sunIndex:
-            targetEntity: SunIndex
-            mappedBy: cruiseLine
         cabin:
             targetEntity: CabinRecommendation
             mappedBy: cruiseLine
@@ -20,14 +17,12 @@ Ship\CruiseBundle\Entity\Route:
         cruiseLine:
             targetEntity: CruiseLine
             inversedBy: route
-#            nullable: true
             joinColumn:
                 name: cruise_line_id
                 referencedColumnName: id
         ship:
             targetEntity: Ship
             inversedBy: route
-#            nullable: true
             joinColumn:
                 name: ship_id
                 referencedColumnName: id
