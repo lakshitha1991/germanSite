@@ -136,4 +136,38 @@ class CabinRecommendation
     {
         return $this->route;
     }
+    /**
+     * @var \Ship\CruiseBundle\Entity\SunIndex
+     */
+    private $sunIndex;
+
+
+    /**
+     * Set sunIndex
+     *
+     * @param \Ship\CruiseBundle\Entity\SunIndex $sunIndex
+     * @return CabinRecommendation
+     */
+    public function setSunIndex(\Ship\CruiseBundle\Entity\SunIndex $sunIndex = null)
+    {
+        $this->sunIndex = $sunIndex;
+
+        return $this;
+    }
+
+    /**
+     * Get sunIndex
+     *
+     * @return \Ship\CruiseBundle\Entity\SunIndex 
+     */
+    public function getSunIndex()
+    {
+        return $this->sunIndex;
+    }
+    /**
+     * @var string
+     */
+    private $sunindex;
+
+
 }

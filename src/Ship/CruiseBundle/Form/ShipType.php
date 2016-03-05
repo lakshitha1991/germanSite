@@ -16,6 +16,11 @@ class ShipType extends AbstractType
     {
         $builder
             ->add('ship')
+            ->add('cruiseLine', 'entity', array(
+                    'placeholder' => 'Choose cruise line',
+                    'class' => 'ShipCruiseBundle:CruiseLine',
+                    'property' => 'cruiseLine'
+                ))
         ;
     }
     

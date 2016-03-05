@@ -9,6 +9,9 @@ Ship\CruiseBundle\Entity\CabinRecommendation:
         cabinRecommendation:
             type: string
             length: 255
+        sunindex:
+            type: string
+            length: 255
     manyToOne:
         cruiseLine:
             targetEntity: CruiseLine
