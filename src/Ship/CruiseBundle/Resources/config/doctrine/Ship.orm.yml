@@ -9,3 +9,21 @@ Ship\CruiseBundle\Entity\Ship:
         ship:
             type: string
             length: 255
+    oneToMany:
+        route:
+            targetEntity: Route
+            mappedBy: cruiseLine
+        sunIndex:
+            targetEntity: SunIndex
+            mappedBy: cruiseLine
+        cabin:
+            targetEntity: CabinRecommendation
+            mappedBy: cruiseLine
+    manyToOne:
+        cruiseLine:
+            targetEntity: CruiseLine
+            inversedBy: ship
+#            nullable: true
+            joinColumn:
+                name: cruise_line_id
+                referencedColumnName: id

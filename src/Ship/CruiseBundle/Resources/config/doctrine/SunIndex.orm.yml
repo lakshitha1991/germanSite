@@ -9,3 +9,25 @@ Ship\CruiseBundle\Entity\SunIndex:
         sunindex:
             type: string
             length: 255
+    manyToOne:
+        cruiseLine:
+            targetEntity: CruiseLine
+            inversedBy: sunIndex
+#            nullable: true
+            joinColumn:
+                name: cruise_line_id
+                referencedColumnName: id
+        ship:
+            targetEntity: Ship
+            inversedBy: sunIndex
+#            nullable: true
+            joinColumn:
+                name: ship_id
+                referencedColumnName: id
+        route:
+            targetEntity: Route
+            inversedBy: sunIndex
+#            nullable: true
+            joinColumn:
+                name: rout_id
+                referencedColumnName: id

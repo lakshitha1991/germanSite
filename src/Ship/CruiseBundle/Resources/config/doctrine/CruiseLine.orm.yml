@@ -9,3 +9,16 @@ Ship\CruiseBundle\Entity\CruiseLine:
         cruiseLine:
             type: string
             length: 255
+    oneToMany:
+        ship:
+            targetEntity: Ship
+            mappedBy: cruiseLine
+        route:
+            targetEntity: Route
+            mappedBy: cruiseLine
+        sunIndex:
+            targetEntity: SunIndex
+            mappedBy: cruiseLine
+        cabin:
+            targetEntity: CabinRecommendation
+            mappedBy: cruiseLine

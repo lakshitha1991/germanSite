@@ -18,7 +18,6 @@ ship_cruise_cabinrecommendation:
     resource: "@ShipCruiseBundle/Resources/config/routing/cabinrecommendation.yml"
     prefix:   /cabinrecommendation
 
-
 ship_cruise_homepage:
     path:     /
     defaults: { _controller: ShipCruiseBundle:Default:home }
@@ -26,3 +25,15 @@ ship_cruise_homepage:
 ship_cruise_result:
     path:     /result
     defaults: { _controller: ShipCruiseBundle:Default:result }
+    
+ship_cruise_contact:
+    path:     /contact
+    defaults: { _controller: ShipCruiseBundle:Default:contact }
+    
+ship_cruise_impressume:
+    path:     /impressume
+    defaults: { _controller: ShipCruiseBundle:Default:impressume }
+    
+ship_cruise_uber_uns:
+    path:     /uberUns
+    defaults: { _controller: ShipCruiseBundle:Default:uberUns }

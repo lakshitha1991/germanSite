@@ -64,5 +64,16 @@ class DefaultController extends Controller {
     public function resultAction() {
         return $this->render('ShipCruiseBundle:Default:page3.html.twig');
     }
-
+    
+    public function contactAction() {
+        return $this->render('ShipCruiseBundle:Default:Contact.html.twig');
+    }
+    
+    public function impressumeAction() {
+        return $this->render('ShipCruiseBundle:Default:Impressume.html.twig');
+    }
+    
+    public function uberUnsAction() {
+        return $this->render('ShipCruiseBundle:Default:UberUns.html.twig');
+    }
 }
