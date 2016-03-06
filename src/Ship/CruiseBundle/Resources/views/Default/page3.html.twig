@@ -2,11 +2,23 @@
 {% block page1 -%} 
     <div class="col-lg-2"> </div>
     <div class="col-lg-8 paddingTop">
-        <h1 class="heading">The Sunny Side of your cruise...</h1>
-        <div >                
-            <button class="btn btn-info">
-                jbljbljblkjb
-            </button>
+        <h1 class="heading">We recommend* a cabin wich is on:</h1>
+        <div >   
+            <div class="col-lg-8"> 
+                <h4 class="resultText">Starboard</h4>
+                <div class="progressBar">
+                    <p>Sonnenkabin.de sunindex on this side:</p>
+                    <div class="progress">
+                        <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
+                            <span class="sr-only">60% Complete</span>
+                        </div>
+                    </div>
+                </div>
+                <h1 class="resultPercent">60%</h1>
+            </div>
+            <div class="col-lg-4">
+                <img src="{{ asset('bundles/shipcruise/img/ship_sides.png') }}" class="shipSideImage"/>
+            </div>
         </div>
     </div>
     <div class="col-lg-2"></div>
