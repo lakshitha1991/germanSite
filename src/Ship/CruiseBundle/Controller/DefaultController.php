@@ -17,12 +17,14 @@ class DefaultController extends Controller {
         $form->handleRequest($request);
         if ($form->isSubmitted()) {
             if ($form->isValid()) {
+                $session = $this->getRequest()->getSession();
+                $session->set('userChoise', $form->getData());
                 $form2 = $this->createForm(new EmptyType(), null, array(
                     'action' => $this->generateUrl('ship_cruise_result'),
                     'method' => 'POST',
                 ));
                 $form2->add('submit', 'submit', array(
-//            'attr'=>array('align'=>'right'),
+//            'attr'=>array('align'=>'right'),  
                     'button_class' => 'btn btn-primary center-block',
                     'label' => '...is Here'
                 ));
@@ -62,7 +64,30 @@ class DefaultController extends Controller {
     }
     
     public function resultAction() {
-        return $this->render('ShipCruiseBundle:Default:page3.html.twig');
+        $session = $this->getRequest()->getSession();
+        if (!$session->has('userChoise')) {
+            $this->redirect($this->generateUrl('ship_cruise_homepage'));
+        }
+        $userChoiseData=$session->get("userChoise");
+        $cruiseLineId=$userChoiseData->getCruiseLine()->getId();
+        $shipId=$userChoiseData->getShip()->getId();
+        $routeId=$userChoiseData->getRoute()->getId();
+        $em = $this->getDoctrine()->getManager();
+        $cabin=$em->getRepository('ShipCruiseBundle:CabinRecommendation')
+                ->createQueryBuilder('c')
+                ->where('c.cruiseLine=:cruiseLine')
+                ->andWhere('c.ship=:ship')
+                ->andWhere('c.route=:route')
+                ->setParameter('cruiseLine', $cruiseLineId)
+                ->setParameter('ship',$shipId )
+                ->setParameter('route', $routeId)
+                ->getQuery()
+                ->getResult();
+        
+        return $this->render('ShipCruiseBundle:Default:page3.html.twig',array(
+            "cabin"=>$cabin[0]->getCabinRecommendation(),
+            "sunIndex"=>$cabin[0]->getSunIndex()
+        ));
     }
     
     public function contactAction() {
