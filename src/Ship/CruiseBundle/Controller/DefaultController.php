@@ -73,16 +73,20 @@ class DefaultController extends Controller {
         $shipId=$userChoiseData->getShip()->getId();
         $routeId=$userChoiseData->getRoute()->getId();
         $em = $this->getDoctrine()->getManager();
-        $cabin=$em->getRepository('ShipCruiseBundle:CabinRecommendation')
-                ->createQueryBuilder('c')
-                ->where('c.cruiseLine=:cruiseLine')
-                ->andWhere('c.ship=:ship')
-                ->andWhere('c.route=:route')
-                ->setParameter('cruiseLine', $cruiseLineId)
-                ->setParameter('ship',$shipId )
-                ->setParameter('route', $routeId)
-                ->getQuery()
-                ->getResult();
+        $cabin=$em->getRepository('ShipCruiseBundle:CabinRecommendation')->findBy(array(
+            'cruiseLine'=>$cruiseLineId,
+            'ship'=>$shipId,
+            'route'=>$routeId
+        ));
+//                ->createQueryBuilder('c')
+//                ->where('c.cruiseLine=:cruiseLine')
+//                ->andWhere('c.ship=:ship')
+//                ->andWhere('c.route=:route')
+//                ->setParameter('cruiseLine', $cruiseLineId)
+//                ->setParameter('ship',$shipId )
+//                ->setParameter('route', $routeId)
+//                ->getQuery()
+//                ->getResult();
         
         return $this->render('ShipCruiseBundle:Default:page3.html.twig',array(
             "cabin"=>$cabin[0]->getCabinRecommendation(),
