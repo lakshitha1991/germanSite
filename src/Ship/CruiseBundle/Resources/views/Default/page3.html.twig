@@ -5,16 +5,21 @@
         <h1 class="heading">We recommend* a cabin wich is on:</h1>
         <div >   
             <div class="col-lg-8"> 
-                <h4 class="resultText">{{cabin}}</h4>
-                <div class="progressBar">
+                <h4 class="resultText">
+                    {% if cabin is not null%}
+                        {{cabin}}
+                    {%else %}
+                        Not found...
+                    {% endif %}</h4>
+                <div class="progressBar"> 
                     <p>Sonnenkabin.de sunindex on this side:</p>
                     <div class="progress">
-                        <div class="progress-bar" role="progressbar" aria-valuenow="{{sunIndex}}" aria-valuemin="0" aria-valuemax="100" style="width: {{sunIndex}}%;">
-                            <span class="sr-only">{{sunIndex}}% Complete</span>
+                        <div class="progress-bar" role="progressbar" aria-valuenow="{% if sunIndex is not null%}{{sunIndex}}{%else %}0{% endif %}" aria-valuemin="0" aria-valuemax="100" style="width: {% if sunIndex is not null%}{{sunIndex}}{%else %}0{% endif %}%;">
+                            <span class="sr-only">{% if sunIndex is not null%}{{sunIndex}}{%else %}0{% endif %}% Complete</span>
                         </div>
                     </div>
                 </div>
-                <h1 class="resultPercent">{{sunIndex}}%</h1>
+                <h1 class="resultPercent">{% if sunIndex is not null%}{{sunIndex}}{%else %}0{% endif %}%</h1>
             </div>
             <div class="col-lg-4">
                 <img src="{{ asset('bundles/shipcruise/img/ship_sides.png') }}" class="shipSideImage"/>

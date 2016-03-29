@@ -10,10 +10,10 @@
 }
 .CEO{
     width: 100%;
-    padding-bottom: 14.5%;
+    padding-bottom: 12.5%;
     background: -webkit-linear-gradient(left,rgba(238,255,255, 0.2),rgba(238,255,255, 1)); /*Safari 5.1-6*/
     background: -o-linear-gradient(left,rgba(238,255,255, 0.2),rgba(238,255,255, 1)); /*Opera 11.1-12*/
-    background: -moz-linear-gradient(left,rgba(238,255,255, 0.2),rgba(238,255,255, 1)); /*Fx 3.6-15*/
+    background: -moz-linear-gradient(left,rgba(238,255,255, 0.3),rgba(238,255,255, 1)); /*Fx 3.6-15*/
     background: linear-gradient(left, rgba(238,255,255, 0.2), rgba(238,255,255, 1));
 }
 .heading {
@@ -34,11 +34,6 @@
     width: 100%;
     height: auto;
     margin-top: 15%;
-}
-.CEOText pre{
-    border: #fff;
-    background-color: rgba(0,0,0, 0);
-    font-family: "Arial Black", Gadget, sans-serif;
 }
 .logo{
     padding-top: 10%;
@@ -98,7 +93,7 @@
     text-align: center;
 }
 .contact{
-    background: rgba(238,255,255, 0.5);     
+    background: rgba(238,255,255, 0.8);     
     padding: 20px;
     border-radius:20px;
 }

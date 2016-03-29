@@ -1,11 +1,13 @@
-{% extends '::base.html.twig' %}
+{% extends '::layout.html.twig' %}
 
-{% block body -%}
-    <h1>Route creation</h1>
-
+{% block pannelTitle %}
+    Route creation
+{% endblock %}
+{% block pannelBody %}
     {{ form(form) }}
-
-        <ul class="record_actions">
+{% endblock %}
+{% block other %}
+    <ul class="record_actions">
     <li>
         <a href="{{ path('route') }}">
             Back to the list

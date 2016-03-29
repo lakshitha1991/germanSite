@@ -1,16 +1,18 @@
-{% extends '::base.html.twig' %}
+{% extends '::layout.html.twig' %}
 
-{% block body -%}
-    <h1>CabinRecommendation edit</h1>
-
+{% block pannelTitle %}
+    CabinRecommendation edit
+{% endblock %}
+{% block pannelBody %}
     {{ form(edit_form) }}
-
-        <ul class="record_actions">
-    <li>
-        <a href="{{ path('cabinrecommendation') }}">
-            Back to the list
-        </a>
-    </li>
-    <li>{{ form(delete_form) }}</li>
-</ul>
+{% endblock %}
+{% block other %}
+    <ul class="record_actions">
+        <li>
+            <a href="{{ path('cabinrecommendation') }}">
+                Back to the list
+            </a>
+        </li>
+        <li>{{ form(delete_form) }}</li>
+    </ul>
 {% endblock %}

@@ -73,7 +73,7 @@ class DefaultController extends Controller {
         $shipId=$userChoiseData->getShip()->getId();
         $routeId=$userChoiseData->getRoute()->getId();
         $em = $this->getDoctrine()->getManager();
-        $cabin=$em->getRepository('ShipCruiseBundle:CabinRecommendation')->findBy(array(
+        $cabin=$em->getRepository('ShipCruiseBundle:CabinRecommendation')->findOneBy(array(
             'cruiseLine'=>$cruiseLineId,
             'ship'=>$shipId,
             'route'=>$routeId
@@ -89,8 +89,8 @@ class DefaultController extends Controller {
 //                ->getResult();
         
         return $this->render('ShipCruiseBundle:Default:page3.html.twig',array(
-            "cabin"=>$cabin[0]->getCabinRecommendation(),
-            "sunIndex"=>$cabin[0]->getSunIndex()
+            "cabin"=>($cabin!==null)?$cabin->getCabinRecommendation():null,
+            "sunIndex"=>($cabin!==null)?$cabin->getSunIndex():null
         ));
     }
     

@@ -1,11 +1,13 @@
-{% extends '::base.html.twig' %}
+{% extends '::layout.html.twig' %}
 
-{% block body -%}
-    <h1>Ship creation</h1>
-
+{% block pannelTitle %}
+    Ship creation
+{% endblock %}
+{% block pannelBody %}
     {{ form(form) }}
-
-        <ul class="record_actions">
+{% endblock %}
+{% block other %}
+    <ul class="record_actions">
     <li>
         <a href="{{ path('ship') }}">
             Back to the list

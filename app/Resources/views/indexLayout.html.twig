@@ -1,19 +1,23 @@
 {% extends '::base.html.twig' %}
 
-{% block body %}
+{% block body -%}
     <div class="no-margin row paddingTop">
         <div class="col-md-2"></div>
         <div class="col-md-8">
-            <div class="panel panel-default center-block">
+            <div class="panel panel-default table-panel">
+    
                 <div class="panel-heading">
                     <h2 class="panel-title center-block">
-                    {% block pannelTitle %}{% endblock %}
+                       {% block pannelTitle %}{% endblock %}
                     </h2>
                 </div>
-                <div class="panel-body">
-                    {% block pannelBody %}{% endblock %}
+                <div class="panel_body">
+                    <div class="table-responsive scroll">
+                    {% block content_table %}{% endblock %}
+                    </div>
                 </div>
             </div>
+
             {% block other %}{% endblock %}
         </div>
         <div class="col-md-2"></div>
