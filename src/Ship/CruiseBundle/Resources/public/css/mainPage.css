@@ -103,10 +103,14 @@
 }
 body{
     height: 100%;
-            width: 100%;
-            background-image: url('../img/background2.jpg');
-            padding-bottom: 20%;
-            background-repeat: no-repeat;
-            background-size: 100% auto;
-            background-attachment: fixed;
+    width: 100%;
+    background-image: url('../img/background2.jpg');
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    padding-bottom: 20%;
+    background-repeat: no-repeat;
+    /*background-size: 100% auto;*/
+    background-attachment: fixed;
 }
